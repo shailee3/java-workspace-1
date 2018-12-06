@@ -1,0 +1,42 @@
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+
+public class UserDAO {
+
+	public void makeInActive(int failedAttempts) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+		
+		Connection con = Connector.getConnection();
+		Statement st = con.createStatement();
+		String query= String.format("update user set deleted = 1 where failed_attempts>"+failedAttempts);
+		st.executeUpdate(query);
+		con.close();		
+		
+	}
+
+	public ArrayList<User> getInActiveUsers() throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+	    
+		ArrayList<User> userList = new ArrayList<User>();
+		Connection con= Connector.getConnection();
+	    Statement st = con.createStatement();
+	    ResultSet rs= st.executeQuery("Select * from User where deleted =1");
+	    while(rs.next())
+	    {
+	    	int id = id;
+			String username = username;
+			String password = password;
+			String address = address;
+			String mobile_number = mobile_number;
+			String deleted = deleted;
+			
+	    }
+		return null;
+	      }
+	
+	
+
+
+}

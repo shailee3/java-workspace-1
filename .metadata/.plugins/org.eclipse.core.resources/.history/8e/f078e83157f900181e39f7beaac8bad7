@@ -1,0 +1,23 @@
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+
+public class UserDAO {
+
+	public void makeInActive(int failedAttempts) throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
+		// fill the code
+		
+	}
+
+	public ArrayList<User> getInActiveUsers() throws SQLException, InstantiationException, IllegalAccessException, ClassNotFoundException {
+	// fill the code
+		return null;
+	      }
+	
+	
+
+
+}
