@@ -7,6 +7,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import cucumber.annotation.After;
 import cucumber.annotation.en.Given;
@@ -19,11 +22,17 @@ public class ShippingDefinition {
 
 	@Given("^I open the shipping detail application URL$")
 	public void setUp() {
-		String exePath = "C:\\AsosDev\\OneDrive - ASOS.com Ltd\\java-workspace-1\\Cucumber-LC-2-Parameterization\\drivers\\chromedriver.exe";
-		 System.setProperty("webdriver.chrome.driver", exePath);
-		 driver=new ChromeDriver();
-		 driver.get("http://apps.qa2qe.cognizant.e-box.co.in/shippingDetails/");
-		    driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);	
+		//String exePath = "C:\\AsosDev\\OneDrive - ASOS.com Ltd\\java-workspace-1\\Cucumber-LC-2-Parameterization\\drivers\\chromedriver.exe";
+		 //System.setProperty("webdriver.chrome.driver", exePath)
+		//driver=new ChromeDriver();
+		String exePath = "C:\\AsosDev\\OneDrive - ASOS.com Ltd\\java-workspace-1\\Cucumber-LC-2-Parameterization\\drivers\\geckodriver.exe";
+		//System.setProperty("webdriver.firefox.marionette", "false");
+		System.setProperty("webdriver.gecko.driver", exePath);
+		//DesiredCapabilities capa = DesiredCapabilities.firefox();
+		//capa.setCapability("marionette", false);
+		driver = new FirefoxDriver();
+		driver.get("http://apps.qa2qe.cognizant.e-box.co.in/shippingDetails/");
+		driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);	
 	}
 
 	@Given("^I am able to see 'Shipping Details' been displayed as header$")

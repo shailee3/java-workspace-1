@@ -36,7 +36,6 @@
 	<classpathentry kind="lib" path="jars/ngwebdriver-0.9.5.jar"/>
 	<classpathentry kind="lib" path="jars/phantomjsdriver-1.2.1.jar"/>
 	<classpathentry kind="lib" path="jars/sac-1.3.jar"/>
-	<classpathentry kind="lib" path="jars/selenium-java-2.47.1.jar"/>
 	<classpathentry kind="lib" path="jars/serializer-2.7.2.jar"/>
 	<classpathentry kind="lib" path="jars/testng-6.8.5.jar"/>
 	<classpathentry kind="lib" path="jars/websocket-api-9.2.11.v20150529.jar"/>
@@ -45,5 +44,6 @@
 	<classpathentry kind="lib" path="jars/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="jars/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="jars/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="jars/selenium-java-2.47.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
