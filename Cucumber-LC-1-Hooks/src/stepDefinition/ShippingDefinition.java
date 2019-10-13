@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import cucumber.annotation.After;
 import cucumber.annotation.Before;
@@ -17,9 +18,13 @@ WebDriver driver;
 
 @Before
 public void setUp() {
-	 String exePath = "C:\\AsosDev\\OneDrive - ASOS.com Ltd\\java-workspace-1\\Cucumber-LC-1-Hooks\\drivers\\chromedriver.exe";
-	 System.setProperty("webdriver.chrome.driver", exePath);
-	 driver=new ChromeDriver();
+	 //String exePath = "D:\\Source\\java-workspace-1\\Cucumber-LC-1-Hooks\\drivers\\chromedriver.exe";
+	 //System.setProperty("webdriver.chrome.driver", exePath);
+	 //driver=new ChromeDriver();
+	 
+	 String exePath = "D:\\Source\\java-workspace-1\\Cucumber-LC-1-Hooks\\drivers\\geckodriver.exe";
+	 System.setProperty("webdriver.gecko.driver", exePath);
+	 driver = new FirefoxDriver();
 }
 
 @Given("^I am on Datex Shipping company portal$")
